@@ -7,6 +7,7 @@ module.exports = {
     const product = await Product.find();
 
     return res.json(product);
+    
   },
 
   async show(req, res) {
