@@ -1,9 +1,7 @@
-// Vamos mostrar qual é o nosso schema, que basicamente é quais os campos que
-// um produto pode ter, e quais os seus respectivos tipos
 const mongoose = require('mongoose');
 const mongoosePaginate = require('mongoose-paginate');
 
-const ProductSchema = new mongoose.Schema({
+const ProductSchema = mongoose.Schema({
   title: {
     type: String,
     required: true,
@@ -14,9 +12,9 @@ const ProductSchema = new mongoose.Schema({
   },
   url: {
     type: String,
-    require: true,
+    required: true,
   },
-  createAt: {
+  creatAt: {
     type: Date,
     default: Date.now,
   },
