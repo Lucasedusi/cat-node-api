@@ -1,6 +1,7 @@
 // Vamos mostrar qual é o nosso schema, que basicamente é quais os campos que
 // um produto pode ter, e quais os seus respectivos tipos
 const mongoose = require('mongoose');
+const mongoosePaginate = require('mongoose-paginate');
 
 const ProductSchema = new mongoose.Schema({
   title: {
@@ -20,5 +21,7 @@ const ProductSchema = new mongoose.Schema({
     default: Date.now,
   },
 });
+
+mongoose.plugin(mongoosePaginate);
 
 mongoose.model('Product', ProductSchema);
